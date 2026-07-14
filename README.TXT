@@ -21,3 +21,30 @@
 
 ❤️Дякую за підтримку каналу
 
+# Cera Landing Page
+
+A responsive landing page for a creative pottery and ceramics studio.
+
+## About the Project
+
+Cera is a concept landing page designed for a ceramics brand that combines craftsmanship, creativity, and community. The website showcases workshops, handcrafted products, and creative experiences for pottery enthusiasts.
+
+
+
+## Features
+
+- Responsive design
+- Modern landing page structure
+- Workshop showcase section
+- Product collection presentation
+- Newsletter subscription block
+- Community-focused storytelling
+- Custom favicon and branding
+
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- Git & GitHub
+

@@ -1,6 +1,30 @@
 {
   "statistics": {
-    "sessions": [],
-    "files": []
+    "sessions": [
+      {
+        "date": "14.07.2026",
+        "start": 1784026317880,
+        "end": 1784026368469
+      },
+      {
+        "date": "14.07.2026",
+        "start": 1784026447513,
+        "end": 1784027521054
+      },
+      {
+        "date": "14.07.2026",
+        "start": 1784027677238,
+        "end": 1784027677238
+      }
+    ],
+    "files": [
+      "head.html",
+      "favicon.png",
+      "favicon.png.~tmp",
+      "style.scss",
+      "variables.css",
+      "settings.scss",
+      "header.html"
+    ]
   }
 }

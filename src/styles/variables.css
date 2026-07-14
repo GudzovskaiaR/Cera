@@ -1,9 +1,27 @@
 :root {
 	/* Шрифт за замовчуванням */
-	--font-family: "Arial", sans-serif;
+	--font-family: "Lato", sans-serif;
 	/* Розмір шрифту за замовченням (де 16 - розмір шрифту за замовчуванням з макету)  */
 	--font-size: 16px;
 	/* Основні кольори */
-	--main-color: #000;
+	--main-color: #E4DCCF;
+	--body-color: #fff;
+	--primary2-color: #DEB35C;
+	--primary3-color: #FFA98C;
+	--primary4-color: #A94C2E;
+	--secondary1-color: #153143;
+	--secondary2-color: #A7D4BD;
+	--secondary3-color: #253E2E;
+	--gray50-color: #FAFAFA;
+	--gray100-color: #f4f4f5;
+	--gray200-color: #e4e4e7;
+	--gray300-color: #d4d4d8;
+	--gray400-color: #a1a1aa;
+	--gray500-color: #71717a;
+	--gray600-color: #52525b;
+	--gray700-color: #3f3f46;
+	--gray800-color: #27272a;
+	--gray900-color: #18181b;
+
 	/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 }
