@@ -3,10 +3,11 @@
 	<nav class="menu__body">
 		<ul class="menu__list">
 			<each loop='item in [
-					{"href": "https://google.com","ancor": "Home"},
-					{"href": "#","ancor": "About"},
-					{"href": "#","ancor": "Blog"},
-					{"href": "#","ancor": "Contacts"}
+					{"href": "https://google.com","ancor": "Our Story"},
+					{"href": "#","ancor": "Workshops"},
+					{"href": "#","ancor": "Collections"},
+					{"href": "#","ancor": "Community"},
+					{"href": "#","ancor": "Contact"}
 				]'>
 				<if condition="'[[active]]' === '[[item.ancor]]'">
 					<li class="menu__item">
