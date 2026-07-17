@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <include
+        src="@components/layout/head/head.html"
+        locals='{
+		"title":"Розробка компонентів", 
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"", 
+		"description":""
+		}'
+    >
+    </include>
+    <style>
+        .components {
+            padding-block: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    </style>
+    <body>
+        <div class="components">
+            <div class="components__container">
+                <div class="components__item">
+                    <h3 data-fls-sectiontitle class="sectiontitle">
+                        Craftsmanship
+                    </h3>
+                    <h3
+                        data-fls-sectiontitle
+                        class="sectiontitle sectiontitle--prymary4 sectiontitle--left"
+                    >
+                        Our collections of craft products and creative kits
+                    </h3>
+                    <h3
+                        data-fls-sectiontitle
+                        class="sectiontitle sectiontitle--left"
+                    >
+                        Join our newsletter
+                    </h3>
+                    <h3
+                        data-fls-sectiontitle
+                        class="sectiontitle sectiontitle--left sectiontitle--secondary2"
+                    >
+                        Craft workshop team building
+                    </h3>
+                </div>
+                <div class="components__item">
+                    <h2 data-fls-sectiontitle class="bigtitle">
+                        Crafted Universe
+                    </h2>
+                    <h2 data-fls-sectiontitle class="bigtitle bigtitle--primary2">
+                        .WORKSHOPS.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="@js/app.js"></script>
+</html>

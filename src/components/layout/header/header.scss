@@ -1,20 +1,18 @@
 .header {
-  padding-top: 11px;
-    background-color: var(--main-color);
-    // .header__container
+    padding-top: 11px;
 
+    // .header__container
     &__container {
         min-height: toRem(149.8);
         display: flex;
         gap: 10px;
         justify-content: space-between;
-        // align-items: center;
     }
 
     // .header__logo
 
     &__logo {
-      margin-top: 27px;
+        margin-top: 27px;
     }
 
     // .header__action
@@ -22,7 +20,6 @@
     &__action {
         position: relative;
         display: flex;
-      
         gap: 26.2px;
         @include adaptiveValue('gap', 26.2, 10);
     }
@@ -30,18 +27,14 @@
     // .header__decor
 
     &__decor {
-      
-width: clamp(90px, 10vw, 150px);
-   
-
+        width: clamp(90px, 10vw, 150px);
         transition: all ease 0.5s;
         html[data-fls-menu-open] & {
             transform: rotate(10deg);
         }
-       img{
-        width: 100%;
-        height: auto;
-       }
-      
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }

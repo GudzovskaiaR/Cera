@@ -30,6 +30,21 @@
         "date": "15.07.2026",
         "start": 1784126802794,
         "end": 1784127059402
+      },
+      {
+        "date": "16.07.2026",
+        "start": 1784186748870,
+        "end": 1784193831077
+      },
+      {
+        "date": "16.07.2026",
+        "start": 1784194323483,
+        "end": 1784194323483
+      },
+      {
+        "date": "17.07.2026",
+        "start": 1784283886955,
+        "end": 1784288282788
       }
     ],
     "files": [
@@ -42,7 +57,13 @@
       "header.html",
       "menu.html",
       "menu.scss",
-      "header.scss"
+      "header.scss",
+      "_components.html",
+      "sectiontitle.scss",
+      "sectiontitle.html",
+      "index.html",
+      "index.scss",
+      "decor-right.svg"
     ]
   }
 }

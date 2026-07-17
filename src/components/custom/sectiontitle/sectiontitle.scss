@@ -1,0 +1,36 @@
+.sectiontitle{
+    color: var(--secondary1-color);
+text-align: center;
+font-family: Ultra;
+line-height: 1.1; 
+@include adaptiveValue("font-size",70 ,25);
+
+@media (max-width:toEm(965)){
+   text-align: left;   
+}
+&--prymary4{
+  color: var(--primary4-color);  
+}
+&--secondary2{
+  color: var(--secondary2-color);  
+}
+&--left{
+ text-align:left;  
+}
+}
+
+.bigtitle{
+color: var(--primary-primary-3, #FFA98C);
+
+
+font-family: Ultra;
+font-size: 150px;
+
+line-height: 1; 
+letter-spacing: -3px;
+
+&--primary2{
+  color: var(--primary2-color);  
+}
+
+}

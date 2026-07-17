@@ -1,2 +1,156 @@
 .index {
 }
+.hero {
+    position: relative;
+
+    // .hero__decor
+
+    &__decor {
+        // .hero__decor--left
+
+        &--left {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width:42%;
+            z-index: 2;
+           
+        }
+
+        // .hero__decor--bottom
+
+        &--bottom {
+            position: absolute;
+            right: 35%;
+            bottom: 0;
+            width: 12%;
+            z-index: 2;
+        }
+
+        // .hero__decor--right
+
+        &--right {
+            position: absolute;
+            // rotate: (-15deg);
+            width: 21.5%;
+            z-index: 2;
+            right: 0;
+
+            // bottom: clamp(60px, 8vw, 125px);
+            bottom: 125px;
+            //
+            // bottom: clamp(40px, 8vw, 125px);
+
+            // width: clamp(90px, 10vw, 150px);
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    // .hero__container
+
+    &__container {
+        padding-top: 10px;
+        @include adaptiveValue('padding-inline', 41.5, 10);
+        @include adaptiveValue(" padding-bottom",94 ,40 );
+    }
+
+    // .hero__title
+
+    &__title {
+        position: relative;
+        color: var(--primary4-color);
+        z-index: 10;
+        text-align: center;
+        font-family: Ultra;
+        line-height: 1;
+        letter-spacing: -2.4px;
+        text-wrap: balance;
+        @include adaptiveValue('margin-bottom', 40, 15);
+        @include adaptiveValue('font-size', 120, 30);
+        @media (max-width: toEm(965)) {
+            text-align: left;
+        }
+    }
+
+    // .hero__subtitle
+
+    &__subtitle {
+    }
+
+    // .hero__cards
+
+    &__cards {
+        position: relative;
+        z-index: 10;
+        padding-top: 74px;
+        width: 100%;
+        max-width: 1132px;
+        aspect-ratio: 1132.03/414.39;
+        @include adaptiveValue("padding-top",74 ,25 );
+        @media (max-width: toEm($mobile)) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .hero__card
+
+    &__card {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        // .hero__card--candles
+
+        &--candles {
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            z-index: 3;
+            width: 37%;
+        }
+
+        // .hero__card--ceramics
+
+        &--ceramics {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 37%;
+            z-index: 2;
+        }
+
+        // .hero__card--decorative
+
+        &--decorative {
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            width: 34%;
+            z-index: 1;
+        }
+        @media (max-width: toEm($mobile)) {
+            position: static;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
+            transform: none;
+            width: 70%;
+            &:not(:last-child) {
+              @include adaptiveValue("margin-bottom",-50 ,-30 );
+            }
+            
+        }
+    }
+}
+.sectiontitle {
+}

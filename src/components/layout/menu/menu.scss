@@ -5,6 +5,7 @@
     // .menu__body
     &__body {
         position: absolute;
+        z-index: 20;
         top: 100px;
         right: 20%;
         padding: 20px;
@@ -16,12 +17,8 @@
         visibility: hidden;
         transform-origin: top right;
         transform: scale(0.85);
-
-        transition:
-            opacity 0.3s,
-            transform 0.3s,
-            visibility 0.3s;
-
+        transition: all ease 0.5s;
+        
         html[data-fls-menu-open] & {
             opacity: 1;
             visibility: visible;
