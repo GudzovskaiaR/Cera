@@ -21,14 +21,24 @@ line-height: 1.1;
 
 .bigtitle{
 color: var(--primary-primary-3, #FFA98C);
-
-
 font-family: Ultra;
-font-size: 150px;
-
 line-height: 1; 
 letter-spacing: -3px;
+@include adaptiveValue("font-size",150 ,35 );
+.crafted{
+  position: relative;
+  display: inline-block;
+}
+.cups{
+  position: absolute;
+   right: 0.5em;
+			bottom: 0.92em;
 
+    pointer-events: none;
+width: 0.813em;
+  height: auto;
+
+}
 &--primary2{
   color: var(--primary2-color);  
 }

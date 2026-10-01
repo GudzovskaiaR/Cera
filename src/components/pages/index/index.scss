@@ -12,9 +12,8 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width:42%;
+            width: 42%;
             z-index: 2;
-           
         }
 
         // .hero__decor--bottom
@@ -55,7 +54,7 @@
     &__container {
         padding-top: 10px;
         @include adaptiveValue('padding-inline', 41.5, 10);
-        @include adaptiveValue(" padding-bottom",94 ,40 );
+        @include adaptiveValue(' padding-bottom', 94, 40);
     }
 
     // .hero__title
@@ -90,7 +89,7 @@
         width: 100%;
         max-width: 1132px;
         aspect-ratio: 1132.03/414.39;
-        @include adaptiveValue("padding-top",74 ,25 );
+        @include adaptiveValue('padding-top', 74, 25);
         @media (max-width: toEm($mobile)) {
             display: flex;
             flex-direction: column;
@@ -146,11 +145,878 @@
             transform: none;
             width: 70%;
             &:not(:last-child) {
-              @include adaptiveValue("margin-bottom",-50 ,-30 );
+                @include adaptiveValue('margin-bottom', -50, -30);
             }
-            
         }
     }
 }
-.sectiontitle {
+// ========================================creationOfProducts===================================================
+
+// .creationOfProducts {
+// 	position: relative;
+// 	background-color: var(--secondary3-color);
+
+// 	// =========================================================
+// 	// INITIAL ANIMATION STATE
+// 	// =========================================================
+
+// 	&__title,
+// 	&__subtitle
+// 	{
+// 		opacity: 0;
+// 		transform: translateY(toRem(-20));
+
+// 		transition:
+// 			opacity 0.8s ease,
+// 			transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+// 	}
+//     &__btn {
+// 		opacity: 0;
+// 		transform: translateY(toRem(20));
+
+// 		transition:
+// 			opacity 0.8s ease 0.55s,
+// 			transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.55s,
+// 			color 0.3s ease,
+// 			background-color 0.3s ease,
+// 			box-shadow 0.3s ease;
+// 	}
+// &.--watcher-view {
+// 		.creationOfProducts__btn {
+// 			opacity: 1;
+// 			transform: translateY(0);
+// 		}}
+// 	// =========================================================
+// 	// WATCHER — ELEMENTS APPEAR
+// 	// =========================================================
+
+// 	&.--watcher-view {
+// 		.creationOfProducts__title,
+// 		.creationOfProducts__subtitle,
+// 		.creationOfProducts__btn {
+// 			opacity: 1;
+// 			transform: translateY(0);
+// 		}
+
+// 		.creationOfProducts__title {
+// 			transition-delay: 0.3s;
+// 		}
+
+// 		.creationOfProducts__subtitle {
+// 			transition-delay: 0.45s;
+// 		}
+
+// 		.creationOfProducts__btn {
+// 			transition-delay: 0.55s;
+// 		}
+
+// 		// Paragraphs
+// 		.about-creationOfProducts__text {
+// 			p {
+// 				opacity: 1;
+// 				clip-path: inset(0 0 0 0);
+// 				transform: translateY(0);
+// 			}
+// 		}
+
+// 		// Cups start floating after appearing
+// 		.cups {
+// 			animation: cupsFloat 4.5s ease-in-out 1s infinite;
+// 		}
+// 	}
+
+// 	// =========================================================
+// 	// CONTAINER
+// 	// =========================================================
+
+// 	&__container {
+// 		display: flex;
+
+// 		@media (max-width: toEm($mobile)) {
+// 			flex-direction: column;
+// 		}
+// 	}
+
+// 	// =========================================================
+// 	// ABOUT
+// 	// =========================================================
+
+// 	&__about {
+// 		@include adaptiveValue("padding-top", 80, 10);
+
+// 		p {
+// 			line-height: 1.6;
+// 		}
+
+// 		@media (max-width: toEm($mobile)) {
+// 			order: 2;
+
+// 			display: flex;
+// 			justify-content: flex-end;
+// 		}
+// 	}
+
+// 	// =========================================================
+// 	// WORKSHOPS
+// 	// =========================================================
+
+// 	&__workshops {
+// 		display: flex;
+// 		flex-direction: column;
+
+// 		@include adaptiveValue("padding-top", 178, 40);
+// 		@include adaptiveValue("padding-bottom", 80, 10);
+// 		@include adaptiveValue("gap", 50, 20);
+// 	}
+
+// 	// =========================================================
+// 	// TITLE
+// 	// =========================================================
+
+// 	&__title {
+// 		position: relative;
+// 	}
+
+// 	// =========================================================
+// 	// SUBTITLE
+// 	// =========================================================
+
+// 	&__subtitle {
+// 		max-width: 624px;
+
+// 		color: var(--primary3-color);
+
+// 		font-size: 24px;
+// 		font-weight: 800;
+// 		line-height: 1.5;
+
+// 		@include adaptiveValue("margin-bottom", 30, 15);
+// 	}
+
+// 	// =========================================================
+// 	// DECORATIVE IMAGE + EYES
+// 	// =========================================================
+
+// 	&__images {
+// 		position: absolute;
+
+// 		left: 0;
+// 		bottom: 0;
+
+// 		width: clamp(320px, 41.67vw, 600px);
+
+// 		pointer-events: none;
+
+// 		.ellipse {
+// 			display: block;
+
+// 			width: 100%;
+// 			height: auto;
+// 		}
+
+// 		.eyes {
+// 			position: absolute;
+// 	left: 35%;
+// 	top: -9%;
+// 	width: 33.33%;
+
+// 	animation: eyesLook 6s ease-in-out infinite;
+// 		}
+//         @keyframes eyesLook {
+// 	0%,
+// 	20%,
+// 	100% {
+// 		transform: translateX(0);
+// 	}
+
+// 	35% {
+// 		transform: translateX(toRem(3));
+// 	}
+
+// 	50% {
+// 		transform: translateX(0);
+// 	}
+
+// 	65% {
+// 		transform: translateX(toRem(-2));
+// 	}
+
+// 	80% {
+// 		transform: translateX(0);
+// 	}
+// }
+
+// 		@media (max-width: toEm(622)) {
+// 			position: relative;
+
+// 			left: auto;
+// 			bottom: auto;
+
+// 			margin-top: toRem(10);
+// 		}
+// 	}
+// }
+
+// // =========================================================
+// // ABOUT TEXT
+// // =========================================================
+
+// .about-creationOfProducts {
+// 	&__text {
+// 		p {
+// 			opacity: 0;
+
+// 			// Text opens from top to bottom
+// 			clip-path: inset(0 0 100% 0);
+
+// 			transform: translateY(toRem(-10));
+
+// 			transition:
+// 				opacity 1s ease,
+// 				clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+// 				transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+// 			&:nth-child(1) {
+// 				transition-delay: 0.15s;
+// 			}
+
+// 			&:nth-child(2) {
+// 				transition-delay: 0.55s;
+// 			}
+// 		}
+// 	}
+// }
+
+// // =========================================================
+// // WORKSHOPS CONTENT
+// // =========================================================
+
+// .workshops-creationOfProducts {
+// 	&__content {
+// 		margin-left: auto;
+
+// 		@media (max-width: toEm($mobile)) {
+// 			margin-left: 0;
+// 		}
+// 	}
+// }
+
+// // =========================================================
+// // CUPS ANIMATION
+// // =========================================================
+
+// @keyframes cupsFloat {
+// 	0%,
+// 	100% {
+// 		transform: translateY(0) rotate(0deg);
+// 	}
+
+// 	50% {
+// 		transform: translateY(-0.05em) rotate(1.5deg);
+// 	}
+// }
+
+// // =========================================================
+// // REDUCED MOTION
+// // =========================================================
+
+// @media (prefers-reduced-motion: reduce) {
+// 	.creationOfProducts {
+// 		&__title,
+// 		&__subtitle,
+// 		&__btn {
+// 			opacity: 1;
+// 			transform: none;
+// 			transition: none;
+// 		}
+
+// 		.about-creationOfProducts__text {
+// 			p {
+// 				opacity: 1;
+// 				clip-path: none;
+// 				transform: none;
+// 				transition: none;
+// 			}
+// 		}
+
+// 		.cups {
+// 			animation: none !important;
+// 		}
+// 	}
+// }
+// =========================================================
+// CREATION OF PRODUCTS
+// =========================================================
+
+.creationOfProducts {
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--secondary3-color);
+
+    // =====================================================
+    // INITIAL STATE — TITLE + SUBTITLE
+    // =====================================================
+
+    &__title,
+    &__subtitle {
+        opacity: 0;
+
+        transform: translateY(toRem(-30));
+
+        transition:
+            opacity 1s ease,
+            transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    // =====================================================
+    // INITIAL STATE — BUTTON
+    // =====================================================
+    // Для кнопки НЕ використовуємо transition для появи.
+    // Інакше він конфліктує з hover-анімацією .button.
+
+    &__btn {
+        opacity: 0;
+        translate: 0 toRem(20);
+    }
+
+    // =====================================================
+    // WATCHER
+    // =====================================================
+
+    &.--watcher-view {
+        // -------------------------
+        // TITLE
+        // -------------------------
+
+        .creationOfProducts__title {
+            opacity: 1;
+            transform: translateY(0);
+
+            transition-delay: 0.3s;
+        }
+
+        // -------------------------
+        // SUBTITLE
+        // -------------------------
+
+        .creationOfProducts__subtitle {
+            opacity: 1;
+            transform: translateY(0);
+
+            transition-delay: 0.45s;
+        }
+
+        // -------------------------
+        // BUTTON
+        // -------------------------
+
+        .creationOfProducts__btn {
+            animation: creationButtonReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1)
+                0.55s both;
+        }
+
+        // -------------------------
+        // ABOUT PARAGRAPHS
+        // -------------------------
+
+        .about-creationOfProducts__text {
+            p {
+                opacity: 1;
+
+                clip-path: inset(0 0 0 0);
+
+                transform: translateY(0);
+            }
+        }
+
+        // -------------------------
+        // CUPS
+        // -------------------------
+
+        .cups {
+            animation: cupsFloat 4.5s ease-in-out 1s infinite;
+        }
+
+        // -------------------------
+        // EYES
+        // -------------------------
+
+        .eyes {
+            animation: eyesLook 6s ease-in-out 1.5s infinite;
+        }
+    }
+
+    // =====================================================
+    // CONTAINER
+    // =====================================================
+
+    &__container {
+        display: flex;
+
+        @media (max-width: toEm($mobile)) {
+            flex-direction: column;
+        }
+    }
+
+    // =====================================================
+    // ABOUT
+    // =====================================================
+
+    &__about {
+        @include adaptiveValue('padding-top', 80, 10);
+
+        p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: toEm($mobile)) {
+            order: 2;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    // =====================================================
+    // WORKSHOPS
+    // =====================================================
+
+    &__workshops {
+        display: flex;
+        flex-direction: column;
+
+        @include adaptiveValue('padding-top', 178, 40);
+        @include adaptiveValue('padding-bottom', 80, 10);
+        @include adaptiveValue('gap', 50, 20);
+    }
+
+    // =====================================================
+    // TITLE
+    // =====================================================
+
+    &__title {
+        position: relative;
+
+        .crafted {
+            position: relative;
+            display: inline-block;
+        }
+
+        .universe {
+            display: block;
+        }
+
+        // .cups {
+        // 	position: absolute;
+
+        // 	top: -34%;
+        // 	right: 25%;
+
+        // 	// 122px / 150px = 0.813em
+        // 	width: 0.813em;
+        // 	height: auto;
+
+        // 	pointer-events: none;
+        // }
+    }
+
+    // =====================================================
+    // SUBTITLE
+    // =====================================================
+
+    &__subtitle {
+        max-width: toRem(624);
+
+        color: var(--primary3-color);
+
+        font-size: toRem(24);
+        font-weight: 800;
+        line-height: 1.5;
+
+        @include adaptiveValue('margin-bottom', 30, 15);
+    }
+
+    // =====================================================
+    // IMAGES — YELLOW SHAPE + EYES
+    // =====================================================
+
+    &__images {
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: clamp(320px, 41.67vw, 600px);
+
+        pointer-events: none;
+
+        @media (max-width: toEm(622)) {
+            position: relative;
+
+            left: auto;
+            bottom: auto;
+
+            margin-top: toRem(10);
+        }
+    }
+}
+
+// =========================================================
+// ABOUT TEXT
+// =========================================================
+
+.about-creationOfProducts {
+    &__text {
+        p {
+            opacity: 0;
+
+            // Поступове відкриття тексту зверху вниз
+            clip-path: inset(0 0 100% 0);
+
+            transform: translateY(toRem(-10));
+
+            transition:
+                opacity 1s ease,
+                clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+            &:nth-child(1) {
+                transition-delay: 0.15s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.55s;
+            }
+        }
+    }
+}
+
+// =========================================================
+// WORKSHOPS CONTENT
+// =========================================================
+
+.workshops-creationOfProducts {
+    &__content {
+        margin-left: auto;
+
+        @media (max-width: toEm($mobile)) {
+            margin-left: 0;
+        }
+    }
+}
+
+// =========================================================
+// YELLOW FIGURE
+// =========================================================
+
+.ellipse {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+// =========================================================
+// EYES
+// =========================================================
+
+.eyes {
+    position: absolute;
+
+    left: 35%;
+    top: -9%;
+
+    width: 33.33%;
+    height: auto;
+
+    // animation додається тільки після --watcher-view
+}
+
+// =========================================================
+// BUTTON REVEAL
+// =========================================================
+
+@keyframes creationButtonReveal {
+    from {
+        opacity: 0;
+        translate: 0 toRem(20);
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+// =========================================================
+// CUPS FLOAT
+// =========================================================
+
+@keyframes cupsFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-0.05em) rotate(1.5deg);
+    }
+}
+
+// =========================================================
+// EYES MOVEMENT
+// =========================================================
+
+@keyframes eyesLook {
+    0%,
+    20%,
+    100% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(toRem(3));
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    65% {
+        transform: translateX(toRem(-2));
+    }
+
+    80% {
+        transform: translateX(0);
+    }
+}
+
+// =========================================================
+// REDUCED MOTION
+// =========================================================
+
+@media (prefers-reduced-motion: reduce) {
+    .creationOfProducts {
+        &__title,
+        &__subtitle {
+            opacity: 1;
+
+            transform: none;
+
+            transition: none;
+        }
+
+        &__btn {
+            opacity: 1;
+
+            translate: none;
+
+            animation: none !important;
+        }
+
+        .about-creationOfProducts__text {
+            p {
+                opacity: 1;
+
+                clip-path: none;
+
+                transform: none;
+
+                transition: none;
+            }
+        }
+
+        .cups,
+        .eyes {
+            animation: none !important;
+        }
+    }
+}
+// ======================================craftGallery==========================================================
+
+.craftGallery {
+    overflow: hidden;
+    background-color: var(--body-color);
+
+    // .craftGallery__container
+
+    &__container {
+        position: relative;
+        aspect-ratio: 1272/895;
+
+        @media (max-width: toEm($mobile)) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    // .craftGallery__item
+
+    &__item {
+        position: absolute;
+        margin: 0;
+        overflow: visible;
+        opacity: 0;
+        translate: 0 toRem(25);
+        scale: 0.96;
+
+        transition:
+            opacity 0.8s ease,
+            translate 1s cubic-bezier(0.22, 1, 0.36, 1),
+            scale 1s ease;
+
+        &.--watcher-view {
+            opacity: 1;
+
+            translate: 0 0;
+            scale: 1;
+        }
+        @media (max-width: toEm($mobile)) {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+        // .craftGallery__item--candle
+
+        &--candle {
+            left: 6%;
+            top: 7%;
+            width: 35%;
+            translate: toRem(-25) toRem(20);
+            @media (max-width: toEm($mobile)) {
+                width: 75%;
+                left: 2%;
+                top: 0;
+            }
+        }
+
+        // .craftGallery__item--painting
+
+        &--painting {
+            width: 20.5%;
+            left: 43%;
+            top: 9%;
+            translate: toRem(25) toRem(20);
+            @media (max-width: toEm($mobile)) {
+                width: 60%;
+                right: 0;
+                top: 5%;
+                margin: 0;
+            }
+        }
+
+        // .craftGallery__item--cups
+
+        &--cups {
+            width: 29%;
+            left: 65%;
+            top: 0;
+            translate: 0 toRem(-20);
+            @media (max-width: toEm($mobile)) {
+                width: 50%;
+                left: 0;
+                top: 0;
+                order: -1;
+                margin: 0;
+            }
+        }
+
+        // .craftGallery__item--candlemedium
+
+        &--candlemedium {
+            width: 24.8%;
+            left: 21%;
+            top: 59%;
+            translate: toRem(-15) toRem(25);
+            @media (max-width: toEm($mobile)) {
+                width: 75%;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+        }
+
+        // .craftGallery__item--candlesmall
+
+        &--candlesmall {
+            left: 41%;
+            top: 40%;
+            width: 16%;
+            translate: toRem(-25) toRem(20);
+            @media (max-width: toEm($mobile)) {
+                width: 45%;
+                left: 0;
+                top: 7%;
+                margin: 0;
+            }
+        }
+
+        // .craftGallery__item--pottery
+
+        &--pottery {
+            left: 59%;
+            top: 34%;
+            width: 34%;
+
+            translate: toRem(25) toRem(25);
+            @media (max-width: toEm($mobile)) {
+                width: 55%;
+                left: 0;
+                top: 7%;
+                margin: 0 auto;
+                @include adaptiveValue('margin-bottom', 270, 80);
+            }
+        }
+    }
+
+    // .craftGallery__image
+
+    &__image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        scale: (0.96);
+        transition: all 0.6s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                scale: (1);
+            }
+        }
+    }
+}
+.text-make,
+.text-take {
+    position: absolute;
+    opacity: 0;
+
+    clip-path: inset(0 100% 0 0);
+
+    transition:
+        opacity 0.8s ease 0.45s,
+        clip-path 1.2s ease 0.45s;
+}
+
+.text-make {
+    top: 28%;
+    left: -18%;
+    width: 67%;
+    height: 101%;
+    transform: rotate(-5deg);
+}
+.text-take {
+    width: 129%;
+    max-width: none;
+    bottom: -40%;
+    left: -11%;
+    transform: rotate(6deg);
+}
+.craftGallery__item.--watcher-view {
+    .text-make,
+    .text-take {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
 }
