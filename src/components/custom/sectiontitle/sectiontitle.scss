@@ -3,7 +3,7 @@
 text-align: center;
 font-family: Ultra;
 line-height: 1.1; 
-@include adaptiveValue("font-size",70 ,25);
+@include adaptiveValue("font-size",70 ,20);
 
 @media (max-width:toEm(965)){
    text-align: left;   
